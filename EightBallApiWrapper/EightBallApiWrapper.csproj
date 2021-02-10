@@ -1,9 +1,38 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>LQ.EightBallApiWrapper</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Liquet</Authors>
+    <Company>LQ LLC</Company>
+    <Product>A C# Wrapper For The 8Ball Delegator API</Product>
+    <Description>Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! API Docs found here: https://8ball.delegator.com/</Description>
+    <Summary>Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! API Docs found here: https://8ball.delegator.com/</Summary>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/EternalLiquet/EightBallApiWrapper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EternalLiquet/EightBallApiWrapper</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageTags>Eight Ball, 8Ball, 8 Ball, Magic 8 Ball, Magic Eight Ball, Eight, Ball, Api, Api Wrapper</PackageTags>
+    <PackageReleaseNotes>Documentation now included!</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>eightball.png</PackageIcon>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\EightBallApiWrapper\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="..\EightBallApiWrapper\images\eightball.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
