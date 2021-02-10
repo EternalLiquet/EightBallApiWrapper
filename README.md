@@ -5,7 +5,7 @@
 Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! API Docs found here: https://8ball.delegator.com/
 
 If you found this library particularly useful/helpful please consider supporting me:  
-<a href='https://ko-fi.com/liquet' target='_blank'><img height='35' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E82Y3GS)
 
 ### Usage Example
 
