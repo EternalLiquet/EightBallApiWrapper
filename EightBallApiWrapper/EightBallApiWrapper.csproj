@@ -3,12 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>LQ.EightBallApiWrapper</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Liquet</Authors>
     <Company>LQ LLC</Company>
     <Product>A C# Wrapper For The 8Ball Delegator API</Product>
-    <Description>Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! API Docs found here: https://8ball.delegator.com/</Description>
-    <Summary>Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! API Docs found here: https://8ball.delegator.com/</Summary>
+    <Description>Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! 
+For documentation on how to use this library, please visit: https://github.com/EternalLiquet/EightBallApiWrapper 
+The original API found here: https://8ball.delegator.com/</Description>
+    <Summary>Don't want to write your own implementation of the 8Ball Delegator API? Want to simply instantiate an object that will do it for you? The 8Ball Delegator Wrapper is here! 
+For documentation on how to use this library, please visit: https://github.com/EternalLiquet/EightBallApiWrapper 
+The original API found here: https://8ball.delegator.com/</Summary>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/EternalLiquet/EightBallApiWrapper</PackageProjectUrl>
     <RepositoryUrl>https://github.com/EternalLiquet/EightBallApiWrapper</RepositoryUrl>
