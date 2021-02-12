@@ -23,8 +23,7 @@ namespace Example
         {
             EightBall eightBall = new EightBall();
             var result = eightBall.AskQuestion("Should I make this totally financially irresponsible decision?");
-            Console.WriteLine(result.Result.magic.answer);
-            //This will be phased out in the future as I make separate async and synchronous functions!
+            Console.WriteLine(result.magic.answer);
         }
     }
 }
@@ -43,15 +42,14 @@ namespace Example
         public async void AskEightBallExample
         {
             EightBall eightBall = new EightBall();
-            var result = await eightBall.AskQuestion("Should I make this totally financially irresponsible decision?");
+            var result = await eightBall.AskQuestionAsync("Should I make this totally financially irresponsible decision?");
             Console.WriteLine(result.magic.answer);
-            //This will be phased out in the future as I make separate async and synchronous functions!
         }
     }
 }
 ```
 
-### Result Class Structure:
+### Resulting Class Structure:
 
 ```javascript
 result: (object){

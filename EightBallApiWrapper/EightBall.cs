@@ -10,12 +10,13 @@ namespace EightBallApiWrapper
     public class EightBall
     {
         private static HttpClient httpClient;
+
         public EightBall()
         {
             httpClient = new HttpClient();
         }
 
-        public async Task<EightBallResponse> AskQuestion(string question)
+        public async Task<EightBallResponse> AskQuestionAsync(string question)
         {
             if (String.IsNullOrEmpty(question)) throw new Exception("Please ask a question");
             HttpResponseMessage response = await httpClient.GetAsync($"https://8ball.delegator.com/magic/JSON/{HttpUtility.HtmlEncode(question)}");
@@ -26,6 +27,21 @@ namespace EightBallApiWrapper
             else
             {
                 EightBallResponse answer = JsonConvert.DeserializeObject<EightBallResponse>(await response.Content.ReadAsStringAsync());
+                return answer;
+            }
+        }
+
+        public EightBallResponse AskQuestion(string question)
+        {
+            if (String.IsNullOrEmpty(question)) throw new Exception("Please ask a question");
+            HttpResponseMessage response = httpClient.GetAsync($"https://8ball.delegator.com/magic/JSON/{HttpUtility.HtmlEncode(question)}").Result;
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something has gone wrong, the API might be down. Please check at: https://8ball.delegator.com/");
+            }
+            else
+            {
+                EightBallResponse answer = JsonConvert.DeserializeObject<EightBallResponse>(response.Content.ReadAsStringAsync().Result);
                 return answer;
             }
         }
