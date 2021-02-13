@@ -16,7 +16,7 @@ namespace EightBallApiWrapper
             httpClient = new HttpClient();
         }
 
-        public async Task<EightBallResponse> AskQuestionAsync(string question)
+        public async Task<EightBallAnswer> AskQuestionAsync(string question)
         {
             if (String.IsNullOrEmpty(question)) throw new Exception("Please ask a question");
             HttpResponseMessage response = await httpClient.GetAsync($"https://8ball.delegator.com/magic/JSON/{HttpUtility.HtmlEncode(question)}");
@@ -26,12 +26,11 @@ namespace EightBallApiWrapper
             }
             else
             {
-                EightBallResponse answer = JsonConvert.DeserializeObject<EightBallResponse>(await response.Content.ReadAsStringAsync());
-                return answer;
+                return new EightBallAnswer(JsonConvert.DeserializeObject<EightBallResponse>(await response.Content.ReadAsStringAsync()));
             }
         }
 
-        public EightBallResponse AskQuestion(string question)
+        public EightBallAnswer AskQuestion(string question)
         {
             if (String.IsNullOrEmpty(question)) throw new Exception("Please ask a question");
             HttpResponseMessage response = httpClient.GetAsync($"https://8ball.delegator.com/magic/JSON/{HttpUtility.HtmlEncode(question)}").Result;
@@ -41,8 +40,7 @@ namespace EightBallApiWrapper
             }
             else
             {
-                EightBallResponse answer = JsonConvert.DeserializeObject<EightBallResponse>(response.Content.ReadAsStringAsync().Result);
-                return answer;
+                return new EightBallAnswer(JsonConvert.DeserializeObject<EightBallResponse>(response.Content.ReadAsStringAsync().Result));
             }
         }
     }

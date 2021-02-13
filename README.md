@@ -23,7 +23,7 @@ namespace Example
         {
             EightBall eightBall = new EightBall();
             var result = eightBall.AskQuestion("Should I make this totally financially irresponsible decision?");
-            Console.WriteLine(result.magic.answer);
+            Console.WriteLine(result.Answer); // "Yes"
         }
     }
 }
@@ -39,11 +39,11 @@ namespace Example
 {
     public class CoolClass
     {
-        public async void AskEightBallExample
+        public async void AskEightBallExample()
         {
             EightBall eightBall = new EightBall();
             var result = await eightBall.AskQuestionAsync("Should I make this totally financially irresponsible decision?");
-            Console.WriteLine(result.magic.answer);
+            Console.WriteLine(result.Answer); // "Yes"
         }
     }
 }
@@ -52,12 +52,10 @@ namespace Example
 ### Resulting Class Structure:
 
 ```javascript
-result: (object){
-    magic: (object){
-        question: string //returns your initial question
-        answer: string //returns the answer to your yes/no question
-        type: string [ Affirmative, Contrary, Neutral ] //a string that will be either "Affirmative", "Contrary", or "Neutral" that denotes what kind of answer you received.
-    }
+Result: (object){
+    Question: string //returns your initial question
+    Answer: string //returns the answer to your yes/no question
+    Type: string [ Affirmative, Contrary, Neutral ] //a string that will be either "Affirmative", "Contrary", or "Neutral" that denotes what kind of answer you received.
 }
 ```
 

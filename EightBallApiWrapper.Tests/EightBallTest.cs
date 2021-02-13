@@ -19,9 +19,9 @@ namespace EightBallApiWrapper.Tests
         public async Task QuestionAskedAsync()
         {
             var answer = await eightBall.AskQuestionAsync("Will I ever find love?");
-            Assert.That(answer.magic.answer, Is.Not.Null);
-            Assert.That(answer.magic.type, Is.Not.Null);
-            Assert.That(answer.magic.question, Is.EqualTo("Will I ever find love"));
+            Assert.That(answer.Answer, Is.Not.Null);
+            Assert.That(answer.Type, Is.Not.Null);
+            Assert.That(answer.Question, Is.EqualTo("Will I ever find love"));
         }
 
         [Test]
@@ -42,9 +42,9 @@ namespace EightBallApiWrapper.Tests
         public void QuestionAsked()
         {
             var answer = eightBall.AskQuestion("Should I make this irresponsible financial purchase?");
-            Assert.That(answer.magic.answer, Is.Not.Null);
-            Assert.That(answer.magic.type, Is.Not.Null);
-            Assert.That(answer.magic.question, Is.EqualTo("Should I make this irresponsible financial purchase"));
+            Assert.That(answer.Answer, Is.Not.Null);
+            Assert.That(answer.Type, Is.Not.Null);
+            Assert.That(answer.Question, Is.EqualTo("Should I make this irresponsible financial purchase"));
         }
 
         [Test]
