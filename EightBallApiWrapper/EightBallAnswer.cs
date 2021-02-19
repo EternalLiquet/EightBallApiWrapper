@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EightBallApiWrapper
+﻿namespace EightBallApiWrapper
 {
     public class EightBallAnswer
     {
@@ -10,7 +6,7 @@ namespace EightBallApiWrapper
         public string Answer { get; set; }
         public string Type { get; set; }
 
-        protected internal EightBallAnswer(EightBallResponse response)
+        protected internal EightBallAnswer(dynamic response)
         {
             Question = response.magic.question;
             Answer = response.magic.answer;

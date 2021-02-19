@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>LQ.EightBallApiWrapper</PackageId>
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <Authors>Liquet</Authors>
     <Company>LQ LLC</Company>
     <Product>A C# Wrapper For The 8Ball Delegator API</Product>
@@ -18,7 +18,7 @@ The original API found here: https://8ball.delegator.com/</Summary>
     <RepositoryUrl>https://github.com/EternalLiquet/EightBallApiWrapper</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
     <PackageTags>Eight Ball, 8Ball, 8 Ball, Magic 8 Ball, Magic Eight Ball, Eight, Ball, Api, Api Wrapper</PackageTags>
-    <PackageReleaseNotes>Non-async function no longer makes http requests</PackageReleaseNotes>
+    <PackageReleaseNotes>Non-async functions make http requests again, now uses dynamic objects</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>eightball.png</PackageIcon>
   </PropertyGroup>
